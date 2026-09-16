@@ -1,0 +1,7 @@
+# Repository-owner review for every change.
+* @qwts
+
+# Agent primitives and workflows: text agents read as directives, and the CI
+# that gates it. Named explicitly so they survive any future relaxation of the
+# wildcard above.
+.github/ @qwts

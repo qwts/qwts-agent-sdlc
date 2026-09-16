@@ -1,0 +1,12 @@
+{
+  "name": "qwts-agent-sdlc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VS Code Copilot SDLC chain for the qwts fleet: custom agents, prompts, and Copilot instructions",
+  "scripts": {
+    "lint:markdown": "markdownlint README.md AGENTS.md docs/ .github/agents .github/prompts .github/copilot-instructions.md"
+  },
+  "devDependencies": {
+    "markdownlint-cli": "^0.49.1"
+  }
+}

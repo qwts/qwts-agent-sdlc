@@ -1,0 +1,44 @@
+{
+  "include": [
+    "README.md",
+    "AGENTS.md",
+    "docs/**/*.md",
+    ".github/copilot-instructions.md",
+    ".github/agents/**/*.md",
+    ".github/prompts/**/*.md"
+  ],
+  "indexes": ["README.md"],
+  "tokenBudgets": {
+    "perDoc": 2600,
+    "bankSlack": 0.25,
+    "overrides": [
+      {
+        "path": "docs/usage.md",
+        "budget": 4000,
+        "reason": "walkthrough of the full chain, carried over from agent-sop's override for the same file; splitting it would break the single narrative it exists to provide"
+      }
+    ],
+    "contextSets": []
+  },
+  "structure": {
+    "maxHeadingDepth": 4,
+    "summaryWithinTokens": 250,
+    "requiredFields": []
+  },
+  "antiPatterns": {
+    "positionalReferences": true,
+    "unresolvedPlaceholders": true,
+    "duplicateParagraphs": {
+      "minLength": 160,
+      "allow": ["send: false"]
+    },
+    "terminology": []
+  },
+  "integrity": {
+    "links": true,
+    "orphans": true,
+    "stalePaths": {
+      "roots": ["docs", ".github"]
+    }
+  }
+}
